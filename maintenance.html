@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Maintenance</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            background-color: #161616;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            perspective: 1000px;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: rotate 3s infinite;
+        }
+
+        .heading {
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .message {
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotateBox 3s infinite;
+        }
+
+        .side {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border: 2px solid #fff;
+            box-sizing: border-box;
+        }
+
+        .front {
+            background-color: #FF5A5F;
+            transform: rotateY(0deg) translateZ(150px);
+        }
+
+        .back {
+            background-color: #FFC1C6;
+            transform: rotateY(180deg) translateZ(150px);
+        }
+
+        .left {
+            background-color: #FF867E;
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+
+        .right {
+            background-color: #FFB3A7;
+            transform: rotateY(90deg) translateZ(150px);
+        }
+
+        .top {
+            background-color: #FFD0B5;
+            transform: rotateX(90deg) translateZ(150px);
+        }
+
+        .bottom {
+            background-color: #FFA79E;
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        @keyframes rotateBox {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            font-weight: 600;
+            border: 2px solid red;
+            padding: 10px;
+            margin-left: -219px;
+            margin-top: -664px;
+            margin-bottom: -262px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            /* Background color */
+            color: #fff;
+            /* Text color */
+            padding: 16px 32px;
+            /* Padding for spacing */
+            border: none;
+            /* Remove border */
+            cursor: pointer;
+            /* Add pointer cursor on hover */
+            font-size: 18px;
+            /* Font size */
+            text-transform: uppercase;
+            /* Convert text to uppercase */
+            transition: transform 0.3s ease-in-out;
+            /* Add smooth transition effect */
+            /* Add 3D effect */
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .button:hover {
+            /* Apply transform on hover */
+            transform: rotateX(20deg) translateY(-5px) scale(1.1);
+        }
+
+        /* Add some depth to the button with box-shadow */
+        .button::after {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            transform: scaleY(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button:hover::after {
+            /* Apply transform on hover */
+            transform: scaleY(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Under Maintenance</h1>
+        <p class="message">We're currently performing maintenance on our website to improve your experience. We'll be
+            back soon!</p>
+        <div class="box">
+            <div class="side front"></div>
+            <div class="side back"></div>
+            <div class="side left"></div>
+            <div class="side right"></div>
+            <div class="side top"></div>
+            <div class="side bottom"></div>
+        </div>
+    </div>
+    <a href="/index.html" class="btn button">Go Home</a>
+    <script src="script.js"></script>
+</body>
+
+</html>

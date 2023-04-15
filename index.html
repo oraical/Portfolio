@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<section class="hero" id="home">
+    <div class="main-width">
+        <header>
+            <div class="logo">
+                <h1>Krishna<span>.</span></h1>
+              
+            </div>
+            <nav>
+                <div class="items">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/maintenance.html">Services</a></li>
+                    <li><a href="/maintenance.html">About</a></li>
+                    <li><a href="/maintenance.html">Experiance</a></li>
+                    <li class="btn"><a href="https://forms.gle/q6DV1wm6EHwohXsb7">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="hero-text">
+                <h3>Hello,</h3>
+                <h1>I Am <span id="typed"></span></h1>
+                <p>“I am seeking opportunities to join a company 
+                    that can help me in enhancing my skills,
+                    strengthening my knowledge and realising my 
+                    potential. I am willing to explore a wide variety of opportunities that can help me gain perspective.”</p>
+                <div class="social">
+                    <a href="https://github.com/oraical" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/krishnendu-mondal-10613b231/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/itsamikrishna/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://dev.to/oraical" target="_blank"><i class="fa-solid fa-bug"></i></a>
+                </div>
+                <button type="button" id="destroyBtn">More About Me</button>
+                <a href="./asset/Krishnendu_CV.pdf" download="KrishnenduCV"><button type="button" class="margin">Download CV</button></a>
+            </div>
+            <div class="footer">
+                <p>@2023 Krishnendu -- All Rights Reserved</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<script type="module" src="script.js"></script>
+<script src="https://kit.fontawesome.com/f4daf6c9f7.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#typed',{
+    strings:["Krishnendu.","UI Designer.","Web Developer.","UX Designer.","Intern Seeker."],
+    typeSpeed:70,
+    backSpeed:60,
+    loop:true
+});
+</script>
+
+</body>
+</html>
